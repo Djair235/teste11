@@ -4,7 +4,7 @@ const handlebars = require('handlebars');
 module.exports = async (req, res) => {
   try {
     // Leia o conteúdo do arquivo formulario.handlebars
-    const templateSource = fs.readFileSync('../src/views/formulario.handlebars', 'utf-8');
+    const templateSource = fs.readFileSync(path.resolve(__dirname, '../src/views/formulario.handlebars'), 'utf-8');
 
     // Compile o template
     const template = handlebars.compile(templateSource);
