@@ -9,14 +9,4 @@ configs.handlebarsConfig(app)
 configs.bodyparserConfig(app)
 app.use(router)
 
-function startServer() {
-    try {
-        app.listen(process.env.PORT || 8081, (error) => {
-            console.log("Servidor rodando em http://localhost:8081")
-            console.log(data.mostrarData())
-        })
-    } catch {
-        console.error("Falha ao iniciar o servidor")
-    }
-}
-startServer()
+module.exports = app
